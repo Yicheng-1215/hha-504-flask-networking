@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 ## Create a Flask app
 app = Flask(__name__)
@@ -6,7 +6,7 @@ app = Flask(__name__)
 ## Define a route
 @app.route('/', methods=['GET'])
 def hello_world():
-    return "Hello, World from Hants Williams!"
+    return render_template('index.html')
 
 ## run on port 5000
 if __name__ == '__main__':
